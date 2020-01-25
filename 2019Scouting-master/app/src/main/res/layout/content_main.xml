@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:scrollbarStyle="insideInset"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/myConstraintLayout"
+            android:layout_width="585dp"
+            android:layout_height="2800dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.example.a2019scouting.MainActivity"
+            tools:showIn="@layout/activity_main">
+
+            <Spinner
+                android:id="@+id/habitatLevelSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/levelText" />
+
+            <LinearLayout
+                android:id="@+id/teleopCargoShipLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cargoShipTeleop">
+
+                <Button
+                    android:id="@+id/teleopCargoShipMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/teleopCargoShip"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/teleopCargoShipPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teleopCargoRocketLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cargoRocketTeleop">
+
+                <Button
+                    android:id="@+id/teleopCargoRocketMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/teleopCargoRocket"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/teleopCargoRocketPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teleopHatchShipLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hatchShipTeleop">
+
+                <Button
+                    android:id="@+id/teleopHatchShipMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/teleopHatchShip"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/teleopHatchShipPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teleopHatchRocketLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hatchRocketTeleop">
+
+                <Button
+                    android:id="@+id/teleopHatchRocketMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/teleopHatchRocket"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/teleopHatchRocketPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sandstormCargoShipLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cargoShipSandstorm">
+
+                <Button
+                    android:id="@+id/sandstormCargoShipMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/sandstormCargoShip"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/sandstormCargoShipPlus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sandstormCargoRocketLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cargoRocketSandstorm">
+
+                <Button
+                    android:id="@+id/sandstormCargoRocketMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/sandstormCargoRocket"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/sandstormCargoRocketPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sandstormHatchShipLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hatchShipSandstorm">
+
+                <Button
+                    android:id="@+id/sandstormHatchShipMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/sandstormHatchShip"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/sandstormHatchShipPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimary"
+                android:text="Submit"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/commentsText" />
+
+            <EditText
+                android:id="@+id/commentsText"
+                android:layout_width="518dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/commentText" />
+
+            <TextView
+                android:id="@+id/positionText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Position:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/matchText"
+                tools:text="Position:" />
+
+            <TextView
+                android:id="@+id/teamText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Team Number:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:text="Name:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/teamMemberSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameText" />
+
+            <Spinner
+                android:id="@+id/teamNumberSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/teamText" />
+
+            <Spinner
+                android:id="@+id/startingPositionSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/positionText" />
+
+            <TextView
+                android:id="@+id/sandstorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Sandstorm"
+                android:textAllCaps="false"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="33sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habitatText" />
+
+            <TextView
+                android:id="@+id/matchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Match Number:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teamText" />
+
+            <EditText
+                android:id="@+id/matchNumberText"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/matchText" />
+
+            <TextView
+                android:id="@+id/habitatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="HAB Level:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/positionText" />
+
+            <Spinner
+                android:id="@+id/startingHABSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/habitatText" />
+
+            <TextView
+                android:id="@+id/hatchRocketSandstorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Hatch - Rocket"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HABLine" />
+
+            <TextView
+                android:id="@+id/hatchShipSandstorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Hatch - Ship"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hatchRocketSandstorm" />
+
+            <TextView
+                android:id="@+id/cargoRocketSandstorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Cargo - Rocket"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hatchShipSandstorm" />
+
+            <TextView
+                android:id="@+id/HABLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Crossed HAB Line"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sandstorm" />
+
+            <CheckBox
+                android:id="@+id/crossedHABLineCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/HABLine" />
+
+            <TextView
+                android:id="@+id/cargoShipSandstorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Cargo - Ship"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargoRocketSandstorm" />
+
+            <LinearLayout
+                android:id="@+id/sandstormHatchRocketLinearLayout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hatchRocketSandstorm">
+
+                <Button
+                    android:id="@+id/sandstormHatchRocketMinus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="-"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <EditText
+                    android:id="@+id/sandstormHatchRocket"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteX="224dp"
+                    tools:layout_editor_absoluteY="135dp" />
+
+                <Button
+                    android:id="@+id/sandstormHatchRocketPlus"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="+"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="328dp"
+                    tools:layout_editor_absoluteY="135dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Teleoperated"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="33sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargoShipSandstorm" />
+
+            <TextView
+                android:id="@+id/hatchRocketTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Hatch - Rocket"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teleop" />
+
+            <TextView
+                android:id="@+id/hatchShipTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Hatch - Ship"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hatchRocketTeleop" />
+
+            <TextView
+                android:id="@+id/cargoRocketTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Cargo - Rocket"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hatchShipTeleop" />
+
+            <TextView
+                android:id="@+id/cargoShipTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Cargo - Ship"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargoRocketTeleop" />
+
+            <TextView
+                android:id="@+id/rocketLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Highest Rocket Level"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargoShipTeleop" />
+
+            <Spinner
+                android:id="@+id/rocketLevelSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rocketLevel" />
+
+            <TextView
+                android:id="@+id/hatchPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Hatch Pickup"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rocketLevel" />
+
+            <CheckBox
+                android:id="@+id/hatchPickupCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hatchPickup" />
+
+            <TextView
+                android:id="@+id/defenseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:text="Defense"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hatchPickup" />
+
+            <CheckBox
+                android:id="@+id/defenseCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/defenseText" />
+
+            <TextView
+                android:id="@+id/endGameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="End Game"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/defenseText" />
+
+            <TextView
+                android:id="@+id/levelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="HAB Level:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameText" />
+
+            <TextView
+                android:id="@+id/commentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Comments and Penalties:"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/levelText" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

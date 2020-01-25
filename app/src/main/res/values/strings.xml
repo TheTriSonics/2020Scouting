@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">FRC 2019 Scouting</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="TeamMember">
+        <item></item>
+        <item>Alexei</item>
+        <item>Alyssa</item>
+        <item>Austin</item>
+        <item>Ben</item>
+        <item>Caiden</item>
+        <item>Carl</item>
+        <item>Carter</item>
+        <item>Celeste</item>
+        <item>Colton</item>
+        <item>Daniel</item>
+        <item>David</item>
+        <item>Elijah</item>
+        <item>Elyse</item>
+        <item>Ethan D.</item>
+        <item>Ethan P.</item>
+        <item>Evan</item>
+        <item>Grant</item>
+        <item>Henry</item>
+        <item>Isabell</item>
+        <item>Jacob D.</item>
+        <item>Jacob K.</item>
+        <item>Jaden</item>
+        <item>Jake</item>
+        <item>Jason</item>
+        <item>Josie</item>
+        <item>Katina</item>
+        <item>Logan</item>
+        <item>Maddie</item>
+        <item>Makaila</item>
+        <item>Mason</item>
+        <item>Matt J.</item>
+        <item>Matt T.</item>
+        <item>McKinley</item>
+        <item>Nick</item>
+        <item>Sam</item>
+        <item>Simon</item>
+        <item>TJ</item>
+        <item>Tyler</item>
+        <item>Valerie</item>
+        <item>Weston</item>
+
+    </string-array>
+
+    <string-array name="TeamNumber">
+        <item></item>
+        <item>494</item>
+        <item>862</item>
+        <item>904</item>
+        <item>1918</item>
+        <item>2137</item>
+        <item>2619</item>
+        <item>3452</item>
+        <item>3534</item>
+        <item>3536</item>
+        <item>3542</item>
+        <item>3604</item>
+        <item>3641</item>
+        <item>3667</item>
+        <item>3707</item>
+        <item>3767</item>
+        <item>4003</item>
+        <item>4216</item>
+        <item>4362</item>
+        <item>4377</item>
+        <item>4391</item>
+        <item>4392</item>
+        <item>4409</item>
+        <item>5086</item>
+        <item>5152</item>
+        <item>5424</item>
+        <item>5436</item>
+        <item>5501</item>
+        <item>5505</item>
+        <item>5577</item>
+        <item>5675</item>
+        <item>5712</item>
+        <item>5860</item>
+        <item>6002</item>
+        <item>6591</item>
+        <item>6753</item>
+        <item>7154</item>
+        <item>7160</item>
+        <item>7501</item>
+        <item>7553</item>
+        <item>7823</item>
+
+    </string-array>
+
+    <string-array name="StartingLocation">
+        <item></item>
+        <item>Left</item>
+        <item>Center</item>
+        <item>Right</item>
+
+    </string-array>
+
+    <string-array name="StartingHabitatLevel">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+
+    </string-array>
+
+    <string-array name="RocketLevel">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="HABLevelEndGame">
+        <item></item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="LiftOthers">
+        <item></item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+
+    </string-array>
+
+</resources>
